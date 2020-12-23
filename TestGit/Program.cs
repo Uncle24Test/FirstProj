@@ -12,5 +12,9 @@ namespace TestGit
         {
             Console.WriteLine("Hello World!");
         }
+        public static void Show()
+        {
+            Console.WriteLine("Hello2 Show");
+        }
     }
 }
