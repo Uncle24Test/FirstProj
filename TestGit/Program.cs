@@ -17,6 +17,7 @@ namespace TestGit
 
         public void show()
         {
+            Console.WriteLine("Test02");
         }
     }
 }
