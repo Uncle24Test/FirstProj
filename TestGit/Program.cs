@@ -24,6 +24,7 @@ namespace TestGit
         public void Test()
         {
             Console.WriteLine("再提交");
+            Console.WriteLine("sdfsdf");
         }
     }
 }
