@@ -20,5 +20,10 @@ namespace TestGit
             Console.WriteLine("Test01");
             Console.WriteLine("Test02");
         }
+
+        public void Test()
+        {
+            Console.WriteLine("再提交");
+        }
     }
 }
