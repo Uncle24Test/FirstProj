@@ -25,6 +25,7 @@ namespace TestGit
         {
             Console.WriteLine("再提交");
             Console.WriteLine("sdfsdf");
+            Console.WriteLine("suibianxiugai,zaitijiao");
         }
     }
 }
