@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaShu.CourseManagement.Model"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:tsc="clr-namespace:TaShu.Controls;assembly=TaShu.Controls"
              mc:Ignorable="d"
              d:DesignHeight="750" d:DesignWidth="1000">
     <Grid>
@@ -271,6 +272,7 @@
                             </StackPanel>
                             <TextBlock Text="最高使用率" HorizontalAlignment="Center" Foreground="#3F4C5D"/>
                         </StackPanel>
+                        <tsc:Instrument Margin="0,20,0,40" Value="15"/>
                     </Grid>
                 </Border>
             </Grid>

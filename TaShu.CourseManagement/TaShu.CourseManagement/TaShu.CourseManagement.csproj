@@ -166,6 +166,12 @@
   <ItemGroup>
     <Resource Include="Assets\Images\user.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TaShu.Controls\TaShu.Controls.csproj">
+      <Project>{243fdafb-889c-4af5-940a-0f128ae73bc0}</Project>
+      <Name>TaShu.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
