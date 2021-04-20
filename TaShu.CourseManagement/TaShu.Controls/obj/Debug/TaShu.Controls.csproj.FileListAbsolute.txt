@@ -1,0 +1,44 @@
+C:\Users\v-xiqian\OneDrive - Microsoft\Desktop\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\bin\Debug\TaShu.Controls.dll
+C:\Users\v-xiqian\OneDrive - Microsoft\Desktop\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\bin\Debug\TaShu.Controls.pdb
+C:\Users\v-xiqian\OneDrive - Microsoft\Desktop\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\Instrument.g.cs
+C:\Users\v-xiqian\OneDrive - Microsoft\Desktop\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls_MarkupCompile.cache
+C:\Users\v-xiqian\OneDrive - Microsoft\Desktop\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls_MarkupCompile.lref
+C:\Users\v-xiqian\OneDrive - Microsoft\Desktop\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\Instrument.baml
+C:\Users\v-xiqian\OneDrive - Microsoft\Desktop\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.g.resources
+C:\Users\v-xiqian\OneDrive - Microsoft\Desktop\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.csproj.CoreCompileInputs.cache
+C:\Users\v-xiqian\OneDrive - Microsoft\Desktop\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.dll
+C:\Users\v-xiqian\OneDrive - Microsoft\Desktop\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.pdb
+C:\Users\v-xiqian\OneDrive - Microsoft\Desktop\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.csprojAssemblyReference.cache
+C:\Users\Administrator\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\bin\Debug\TaShu.Controls.dll
+C:\Users\Administrator\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\bin\Debug\TaShu.Controls.pdb
+C:\Users\Administrator\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\Instrument.g.cs
+C:\Users\Administrator\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls_MarkupCompile.cache
+C:\Users\Administrator\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls_MarkupCompile.lref
+C:\Users\Administrator\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\Instrument.baml
+C:\Users\Administrator\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.g.resources
+C:\Users\Administrator\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.dll
+C:\Users\Administrator\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.pdb
+C:\Users\Administrator\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.csprojAssemblyReference.cache
+C:\Users\v-xiqian\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\bin\Debug\TaShu.Controls.dll
+C:\Users\v-xiqian\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\bin\Debug\TaShu.Controls.pdb
+C:\Users\v-xiqian\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\Instrument.g.cs
+C:\Users\v-xiqian\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls_MarkupCompile.cache
+C:\Users\v-xiqian\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls_MarkupCompile.lref
+C:\Users\v-xiqian\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\Instrument.baml
+C:\Users\v-xiqian\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.g.resources
+C:\Users\v-xiqian\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.csproj.CoreCompileInputs.cache
+C:\Users\v-xiqian\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.dll
+C:\Users\v-xiqian\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.pdb
+C:\Users\v-xiqian\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.csprojAssemblyReference.cache
+C:\Users\59751\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\bin\Debug\TaShu.Controls.dll
+C:\Users\59751\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\bin\Debug\TaShu.Controls.pdb
+C:\Users\59751\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.csprojAssemblyReference.cache
+C:\Users\59751\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\Instrument.g.cs
+C:\Users\59751\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls_MarkupCompile.cache
+C:\Users\59751\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls_MarkupCompile.lref
+C:\Users\59751\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\Instrument.baml
+C:\Users\59751\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.g.resources
+C:\Users\59751\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.csproj.CoreCompileInputs.cache
+C:\Users\59751\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.dll
+C:\Users\59751\OneDrive\hhh\Git\FirstProj\TaShu.CourseManagement\TaShu.Controls\obj\Debug\TaShu.Controls.pdb
