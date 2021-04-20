@@ -5,9 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaShu.CourseManagement.Model"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:lvcs="clr-namespace:LiveCharts;assembly=LiveCharts"
              xmlns:tsc="clr-namespace:TaShu.Controls;assembly=TaShu.Controls"
+             xmlns:converter="clr-namespace:TaShu.CourseManagement.Converter"
              mc:Ignorable="d"
-             d:DesignHeight="750" d:DesignWidth="1000">
+             d:DesignHeight="800" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <converter:BoolArrowConverter x:Key="boolArrowConverter"/>
+            <converter:BoolBrushConverter x:Key="boolBrushConverter"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="160"/>
@@ -155,7 +164,6 @@
                     </StackPanel>
                 </Grid>
             </Border>
-
         </UniformGrid>
         <Grid Grid.Row="1" Margin="10,0">
             <Grid.ColumnDefinitions>
@@ -272,10 +280,165 @@
                             </StackPanel>
                             <TextBlock Text="最高使用率" HorizontalAlignment="Center" Foreground="#3F4C5D"/>
                         </StackPanel>
-                        <tsc:Instrument Margin="0,20,0,40" Value="15"/>
+                        <tsc:Instrument Margin="0,20,0,40" 
+                                        Value="{Binding InstrumentValue}" 
+                                        MinVal="-10" 
+                                        MaxVal="100" 
+                                        ScaleCountArea="11"
+                                        ScalTextSize="15"
+                                        ScaleBackground="Pink"
+                                        PlateBackground="Blue"/>
                     </Grid>
                 </Border>
             </Grid>
         </Grid>
+        <Grid Margin="10,0" Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text="课程总览" Foreground="#3F4C5D" VerticalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" >
+                    <Hyperlink>详情</Hyperlink>
+            </TextBlock>
+
+            <!---运行的时候用vs的热部署功能，在运行中进行修改-->
+            <!--<ListView Grid.Row="1" ItemsSource="{Binding}"></ListView>-->
+
+            <ItemsControl ItemsSource="{Binding CourseSeriesList}" Grid.Row="1">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="White" CornerRadius="10" Margin="0,5" >
+                            <Border.Effect>
+                                <DropShadowEffect Color="Gray" ShadowDepth="0" BlurRadius="10" Opacity="0.3" Direction="0"></DropShadowEffect>
+                            </Border.Effect>
+                            <Grid Height="70">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="3.5*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border BorderBrush="#DDD" BorderThickness="0,0,1,0" Margin="0,10"/>
+                                <Border Grid.Column="1" BorderBrush="#DDD" BorderThickness="0,0,1,0" Margin="0,10"/>
+                                <TextBlock Text="{Binding CourseName}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#444"/>
+                                <lvc:PieChart Grid.Column="1" LegendLocation="Right" InnerRadius="15" Margin="0,0,20,0" Series="{Binding SeriesCollection}">
+                                    <!--<lvc:PieChart.Series>
+                                        <lvcs:SeriesCollection>
+                                            <lvc:PieSeries Title="111" Values="10" DataLabels="False"/>
+                                            <lvc:PieSeries Title="222" Values="20" DataLabels="False"/>
+                                            <lvc:PieSeries Title="333" Values="50" DataLabels="False"/>
+                                            <lvc:PieSeries Title="333" Values="50" DataLabels="False"/>
+                                            <lvc:PieSeries Title="333" Values="50" DataLabels="False"/>
+                                        </lvcs:SeriesCollection>
+                                    </lvc:PieChart.Series>-->
+                                    <lvc:PieChart.ChartLegend>
+                                        <lvc:DefaultLegend BulletSize="11"/>
+                                    </lvc:PieChart.ChartLegend>
+                                    <lvc:PieChart.DataTooltip>
+                                        <lvc:DefaultTooltip BulletSize="11"/>
+                                    </lvc:PieChart.DataTooltip>
+                                </lvc:PieChart>
+                                <ItemsControl Grid.Column="2" ItemsSource="{Binding SeriesList}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                                <UniformGrid Columns="{Binding DataContext.ItemCount,RelativeSource={RelativeSource AncestorType=UserControl,Mode=FindAncestor}}"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition MinHeight="20"/>
+                                                    <RowDefinition MinHeight="20"/>
+                                                </Grid.RowDefinitions>
+
+                                                <TextBlock Text="{Binding SeriesName}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                <TextBlock Text="{Binding SeriesValue}" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1"/>
+                                                <TextBlock Text="{Binding IsGrowing,Converter={StaticResource boolArrowConverter}}" 
+                                                           Foreground="{Binding IsGrowing,Converter={StaticResource boolBrushConverter}}"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Margin="10,0,0,0"/>
+                                                <TextBlock Text="{Binding ChangeRate}"
+                                                           Foreground="{Binding IsGrowing,Converter={StaticResource boolBrushConverter}}"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Margin="10,0,0,0"/>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <!---用stackpanel写出来-->
+            <!--<StackPanel Grid.Row="1" Orientation="Vertical">
+                <Border Background="LightBlue" CornerRadius="10" Margin="0,5" >
+                    <Border.Effect>
+                        <DropShadowEffect Color="Gray" ShadowDepth="0" BlurRadius="10" Opacity="0.3" Direction="0"></DropShadowEffect>
+                    </Border.Effect>
+                    <Grid Height="70">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="3.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="C#/.net 架构师蜕变营" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#444"/>
+                        <lvc:PieChart Grid.Column="1" LegendLocation="Right" InnerRadius="15">
+                            <lvc:PieChart.Series>
+                                <lvcs:SeriesCollection>
+                                    <lvc:PieSeries Title="111" Values="10" DataLabels="False"/>
+                                    <lvc:PieSeries Title="222" Values="20" DataLabels="False"/>
+                                    <lvc:PieSeries Title="333" Values="50" DataLabels="False"/>
+                                    <lvc:PieSeries Title="333" Values="50" DataLabels="False"/>
+                                    <lvc:PieSeries Title="333" Values="50" DataLabels="False"/>
+                                </lvcs:SeriesCollection>
+                            </lvc:PieChart.Series>
+                            <lvc:PieChart.ChartLegend>
+                                <lvc:DefaultLegend BulletSize="10"/>
+                            </lvc:PieChart.ChartLegend>
+                            <lvc:PieChart.DataTooltip>
+                                <lvc:DefaultTooltip BulletSize="10"/>
+                            </lvc:PieChart.DataTooltip>
+                        </lvc:PieChart>
+                        <UniformGrid Grid.Column="2" Columns="5">
+                            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="云课堂"/>
+                                <TextBlock Text="161" Grid.Row="1"/>
+                                <TextBlock Text="↓" Grid.Column="1"/>
+                                <TextBlock Text="75%" Grid.Column="1" Grid.Row="1"/>
+                            </Grid>
+                        </UniformGrid>
+                    </Grid>
+                </Border>
+                <Border Background="LightBlue" CornerRadius="10" Margin="0,5" >
+                    <Border.Effect>
+                        <DropShadowEffect Color="Gray" ShadowDepth="0" BlurRadius="10" Opacity="0.3" Direction="0"></DropShadowEffect>
+                    </Border.Effect>
+                    <Grid Height="70">
+                        <Grid.ColumnDefinitions>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </Border>
+            </StackPanel>-->
+        </Grid>
     </Grid>
+    </ScrollViewer>
 </UserControl>

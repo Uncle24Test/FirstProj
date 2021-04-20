@@ -26,6 +26,7 @@ namespace TaShu.CourseManagement.ViewModel
             this.LoginModel.UserName = "他二十四叔";
             this.LoginModel.PassWord = "123456";
             this.LoginModel.ValidateCode = "7364";
+
             this.CloseWindowCommand = new CommandBase();
             this.CloseWindowCommand.DoExecute = (o) => { (o as Window).Close(); };
             this.CloseWindowCommand.DoCanExecute = (o) => { return true; };

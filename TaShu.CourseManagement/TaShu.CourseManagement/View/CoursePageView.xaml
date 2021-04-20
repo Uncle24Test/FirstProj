@@ -6,7 +6,131 @@
              xmlns:local="clr-namespace:TaShu.CourseManagement.Model"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="课程中心" FontSize="30"/>
-    </Grid>
+    <UserControl.Resources>
+        <ControlTemplate TargetType="RadioButton" x:Key="CategoryItemButtonTemplate">
+            <Grid Background="Transparent">
+                <Border Background="#EEE" CornerRadius="3" x:Name="back" Margin="5,0">
+                    <TextBlock Text="{TemplateBinding Content}" Margin="15,6" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="Background" Value="Orange" TargetName="back"/>
+                    <!--<Setter Property="Foreground" Value="White" TargetName="back"/>-->
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Border CornerRadius="5" Background="White">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="#DDD" BorderThickness="0,0,0,1" Margin="20,0">
+                <Grid Margin="10,18">
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="35" Height="auto"/>
+                        <RowDefinition MinHeight="35" Height="auto"/>
+                        <RowDefinition MinHeight="35" Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="课程分类" Margin="0,0,10,0" Foreground="#666" VerticalAlignment="Center"/>
+                        <ItemsControl ItemsSource="{Binding CategoryCourses}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <RadioButton Content="{Binding CategoryName}" Template="{StaticResource CategoryItemButtonTemplate}" IsChecked="{Binding IsSelected}"
+                                                 GroupName="Courses"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="技术分类" Margin="0,0,10,0" Foreground="#666" VerticalAlignment="Center"/>
+                        <ItemsControl ItemsSource="{Binding CategoryTechology}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <RadioButton Content="{Binding CategoryName}" Template="{StaticResource CategoryItemButtonTemplate}" IsChecked="{Binding IsSelected}"
+                                                 GroupName="Techology"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="授课老师" Margin="0,0,10,0" Foreground="#666" VerticalAlignment="Center"/>
+                        <ItemsControl ItemsSource="{Binding CategoryTeacher}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <RadioButton Content="{Binding CategoryName}" Template="{StaticResource CategoryItemButtonTemplate}" IsChecked="{Binding IsSelected}"
+                                                 GroupName="Teacher"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                    <Button Grid.Row="2" Content="+ 添加课程" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                </Grid>
+            </Border>
+            <StackPanel Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Background="#DDD" Width="90" Height="60" CornerRadius="5" Margin="0,15">
+                        <Border.Effect>
+                            <DropShadowEffect Color="Gray" ShadowDepth="0" BlurRadius="10" Direction="0" Opacity="0.3"/>
+                        </Border.Effect>
+                    </Border>
+                    <StackPanel Grid.Column="1">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  FontSize="16" Foreground="#333">
+                                <Hyperlink>
+                                    <Hyperlink.Style>
+                                        <Style>
+                                            <Setter Property="TextBlock.TextDecorations" Value="{x:Null}"/>
+                                        </Style>
+                                    </Hyperlink.Style>
+                                    <TextBlock Text="c# .net 架构师蜕变营"/>
+                                </Hyperlink>
+                            </TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <Border Background="#EEE">
+                                    <TextBlock Text="Eleven"/>
+                                </Border>
+                                <Border Background="#EEE">
+                                    <TextBlock Text="Eleven"/>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                        <TextBlock Text="c# .net 架构师蜕变营c# .net 架构师蜕变营c# .net 架构师蜕变营c# .net 架构师蜕变营c# .net 架构师蜕变营c# .net 架构师蜕变营c# .net 架构师蜕变营" TextWrapping="Wrap" LineHeight="23"
+                                   Foreground="#AAA"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Margin="5,0">
+                            <Hyperlink>详情</Hyperlink>
+                        </TextBlock>
+                        <TextBlock Margin="5,0">
+                            <Hyperlink>详情</Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
 </UserControl>

@@ -253,7 +253,7 @@
                         <RowDefinition MinHeight="23" Height="auto"/>
                     </Grid.RowDefinitions>
                     <TextBox Height="42" Text="{Binding LoginModel.UserName,UpdateSourceTrigger=PropertyChanged}" Foreground="#555" Style="{DynamicResource UsernameTextBoxStyle}" Name="txtUserName"/>
-                    <PasswordBox Grid.Row="1" Height="42" Style="{DynamicResource PasswordBoxStyle}"
+                    <PasswordBox x:Name="pwdBox" Grid.Row="1" Height="42" Style="{DynamicResource PasswordBoxStyle}"
                                  common:PasswordHelper.Attach="True"
                                  common:PasswordHelper.Password="{Binding Path=LoginModel.PassWord,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
                     <!--绑定enter键一种方式 UpdateSourceTrigger=PropertyChanged-->

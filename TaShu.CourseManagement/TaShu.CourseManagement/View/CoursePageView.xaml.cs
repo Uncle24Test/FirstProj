@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaShu.CourseManagement.ViewModel;
 
 namespace TaShu.CourseManagement.View
 {
@@ -23,6 +24,7 @@ namespace TaShu.CourseManagement.View
         public CoursePageView()
         {
             InitializeComponent();
+            this.DataContext = new CoursePageViewModel();
         }
     }
 }

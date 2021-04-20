@@ -108,9 +108,16 @@
     <Compile Include="Common\MD5Provider.cs" />
     <Compile Include="Common\NotifyBase.cs" />
     <Compile Include="Common\PasswordHelper.cs" />
+    <Compile Include="Converter\BoolArrowConverter.cs" />
+    <Compile Include="Converter\BoolBrushConverter.cs" />
     <Compile Include="Converter\GenderConverter.cs" />
     <Compile Include="DataAccess\DataEntity\UserEntity.cs" />
     <Compile Include="DataAccess\LocalDataAccess.cs" />
+    <Compile Include="Model\CategoryItemModel.cs" />
+    <Compile Include="Model\CourseSeriesModel.cs" />
+    <Compile Include="Model\SeriesModel.cs" />
+    <Compile Include="ViewModel\CoursePageViewModel.cs" />
+    <Compile Include="ViewModel\FirstPageViewModel.cs" />
     <Compile Include="View\CoursePageView.xaml.cs">
       <DependentUpon>CoursePageView.xaml</DependentUpon>
     </Compile>
