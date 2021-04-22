@@ -1,5 +1,1 @@
-先checkout一个分支test1
-再checkout一个分支test2 添加本文件后提交合并
-
-之后再回到test1分支，执行git fetch origin dev 猜想是在test1分支将代码pull到dev分支
-而后再执行合并 git merge from dev to test1
+t2
